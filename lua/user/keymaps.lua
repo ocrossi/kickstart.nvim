@@ -18,6 +18,13 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- move line like in terminal
+keymap("i", "<C-a>", "<esc>0:i", opts)
+keymap("n", "<C-a>", "<esc>0", opts)
+
+keymap("i", "<C-e>", "<esc>$:i", opts)
+keymap("n", "<C-e>", "<esc>$", opts)
+
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
