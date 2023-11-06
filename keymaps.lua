@@ -72,6 +72,9 @@ keymap("n", "<F2>", ":tabprev<CR>", opts)
 keymap("n", "<F3>", ":tabprev<CR>", opts)
 keymap("n", "<F4>", ":tabnew<CR>", opts)
 
+keymap("i", "<F2>", ":tabprev<CR>", opts)
+keymap("i", "<F3>", ":tabprev<CR>", opts)
+keymap("i", "<F4>", ":tabnew<CR>", opts)
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
