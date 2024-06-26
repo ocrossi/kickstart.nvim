@@ -169,6 +169,16 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Custom keymaps
+
+local opts = { noremap = true, silent = true }
+
+vim.keymap('n', '<F2>', ':tabprev<CR>', opts)
+vim.keymap('n', '<F3>', ':tabnext<CR>', opts)
+vim.keymap('n', '<F4>', ':tabnew ', opts)
+vim.vim.keymap('i', '<F2>', '<esc>:tabprev<CR>', opts)
+vim.keymap('i', '<F3>', '<esc>:tabnext<CR>', opts)
+vim.keymap('i', '<F4>', '<esc>:tabnew ', opts)
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -732,7 +742,7 @@ require('lazy').setup({
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
           ['<C-y>'] = cmp.mapping.confirm { select = true },
-          ['<space><tab>'] = cmp.mapping.confirm { select = true },
+          ['<F1>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
@@ -787,7 +797,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'retrobox'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
