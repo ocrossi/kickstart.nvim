@@ -171,14 +171,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Custom keymaps
 
-local opts = { noremap = true, silent = true }
-
-vim.keymap('n', '<F2>', ':tabprev<CR>', opts)
-vim.keymap('n', '<F3>', ':tabnext<CR>', opts)
-vim.keymap('n', '<F4>', ':tabnew ', opts)
-vim.vim.keymap('i', '<F2>', '<esc>:tabprev<CR>', opts)
-vim.keymap('i', '<F3>', '<esc>:tabnext<CR>', opts)
-vim.keymap('i', '<F4>', '<esc>:tabnew ', opts)
+vim.keymap.set('n', '<F2>', ':tabprev<CR>', opts)
+vim.keymap.set('n', '<F3>', ':tabnext<CR>', opts)
+vim.keymap.set('n', '<F4>', ':tabnew ', opts)
+vim.keymap.set('i', '<F2>', '<esc>:tabprev<CR>', opts)
+vim.keymap.set('i', '<F3>', '<esc>:tabnext<CR>', opts)
+vim.keymap.set('i', '<F4>', '<esc>:tabnew ', opts)
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
